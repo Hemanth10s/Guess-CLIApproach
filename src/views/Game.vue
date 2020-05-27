@@ -8,7 +8,7 @@
         </header>
         <u><h3 id="guess">Make your guess:</h3></u>
         
-        <form ref="sheet" method="POST" action="https://www.w3schools.com/tags/att_form_action.asp" >
+        <form ref="sheet" method="POST" action="https://fathomless-cliffs-77664.herokuapp.com/save" >
             <input class="tb" type="text" name="name" placeholder="Enter Your Name" style="width:265px;" required><br><br>
             <input type="text" name="score" id="display" v-model="score" disabled>&emsp;&emsp;
             <input type="hidden" name="score" id="final" v-model="score">
@@ -64,7 +64,7 @@ export default {
                 }
             },
             fetchbuttons:async function(){
-                let temp=await axios.get("http://localhost:3000/buttons")
+                let temp=await axios.get("https://fathomless-cliffs-77664.herokuapp.com/buttons")
                 this.buttons=temp.data
             },
             savescore:function(){

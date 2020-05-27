@@ -31,7 +31,7 @@ export default {
     },
     methods:{
         fetchscores:async function(){
-            let temp=await axios.get("http://localhost:3000/get-scores")
+            let temp=await axios.get("https://fathomless-cliffs-77664.herokuapp.com/get-scores")
             this.scores=temp.data.slice(0,5)
         }
     }
